@@ -15,17 +15,13 @@ PLM-Bot simplifies interaction with web-based PLM systems by automating tedious 
 
 ## Installation
 
-To use PLM-Bot, simply include the JavaScript file in your project:
+To use PLM-Bot, simply run the following command in your browser's Developer Tools Console (F12):
 
-```html
-<script src="plm-bot.js"></script>
+```javascript
+document.head.insertAdjacentElement('beforeend', Object.assign(document.createElement('script'), { src: 'https://raw.githubusercontent.com/erman999/PLM-Bot/refs/heads/main/PLM_Bot.js' }));
 ```
 
-Or if you are using Node.js:
-
-```bash
-npm install plm-bot
-```
+This will dynamically load the script into the current webpage.
 
 ## Usage
 
@@ -33,7 +29,7 @@ npm install plm-bot
 You can run PLM-Bot for a single set of values:
 
 ```javascript
-const plmBot = new PLM_BOT();
+const plmBot = new PLM_Bot();
 plmBot.set(['Activity Name', 'Request Owner', 'Activity Type', 'Responsible Department', 'Constraint Type', '2024-12-18', '5', 'kisi']).run();
 ```
 
@@ -41,41 +37,23 @@ plmBot.set(['Activity Name', 'Request Owner', 'Activity Type', 'Responsible Depa
 Load multiple sets of values and run them sequentially:
 
 ```javascript
-const plmBot = new PLM_BOT();
+const plmBot = new PLM_Bot();
 plmBot.load(['Test1', 'Department1', 'Type1', 'DepartmentA', 'ConstraintA', '2024-12-18', '5', 'kisi']);
 plmBot.load(['Test2', 'Department2', 'Type2', 'DepartmentB', 'ConstraintB', '2024-12-19', '3', 'kisi']);
 plmBot.runLoaded();
 ```
 
-## API Reference
-
-### Methods
-
-#### `set(arr)`
-Sets the values for the bot to use.
-- **Parameters**:
-  - `arr` (Array): An array of values corresponding to the selectors defined in `items`.
-
-#### `load(arr)`
-Adds a new set of values to the queue for batch processing.
-- **Parameters**:
-  - `arr` (Array): A dataset to be processed.
-
-#### `run()`
-Executes the bot for the current set of values.
-
-#### `runLoaded()`
-Executes the bot for all loaded datasets sequentially.
-
-#### `checkLoader()`
-Waits until the loading element (e.g., `.x-mask-loading`) disappears.
+### Accessing the Bot
+1. Open the website where you want to use PLM-Bot.
+2. Press `F12` to open Developer Tools.
+3. Paste the installation script into the console and press `Enter`.
+4. Use the provided examples to configure and run the bot.
 
 ## Development
 
 ### Prerequisites
 
-- A modern web browser with JavaScript enabled.
-- Optional: Node.js for local development.
+- Google Chrome or any modern browser with Developer Tools.
 
 ### Structure
 
