@@ -18,7 +18,7 @@ PLM-Bot simplifies interaction with web-based PLM systems by automating tedious 
 To use PLM-Bot, simply run the following command in your browser's Developer Tools Console (F12):
 
 ```javascript
-document.head.insertAdjacentElement('beforeend', Object.assign(document.createElement('script'), { src: 'https://raw.githubusercontent.com/erman999/PLM-Bot/refs/heads/main/PLM_Bot.js' }));
+document.head.insertAdjacentElement('beforeend', Object.assign(document.createElement('script'), { src: 'https://cdn.jsdelivr.net/gh/erman999/PLM-Bot/PLM_Bot.js', type: 'text/javascript' }));
 ```
 
 This will dynamically load the script into the current webpage.
