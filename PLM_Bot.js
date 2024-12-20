@@ -13,6 +13,7 @@ class PLM_Bot {
       { selector: '#PJL_wizard_apply button', eventTypes: ['click'], delay: 100, value: '' },
     ];
     this.loaded = [];
+    console.log("PLM Bot activated.");
   }
   set(arr) {
     this.items.forEach((item, i) => {
@@ -65,3 +66,14 @@ class PLM_Bot {
     }
   }
 }
+
+const plmBot = new PLM_Bot();
+
+// Single run
+// plmBot.set(['Test1', 'PROJE_DEPARTMANI', 'DEGISIKLIK_YONETIMI', 'PROJE', 'SNET', '2024-12-18', '5', 'erman']).run();
+
+// Multiple run
+// plmBot.load(['xTest1', 'PROJE_DEPARTMANI', 'DEGISIKLIK_YONETIMI', 'PROJE', 'SNET', '2024-12-18', '5', 'erman']);
+// plmBot.load(['xTest2', 'PROJE_DEPARTMANI', 'DEGISIKLIK_YONETIMI', 'PROJE', 'SNET', '2024-12-18', '5', 'erman']);
+// plmBot.load(['xTest3', 'PROJE_DEPARTMANI', 'DEGISIKLIK_YONETIMI', 'PROJE', 'SNET', '2024-12-18', '5', 'erman']);
+// plmBot.runLoaded();
