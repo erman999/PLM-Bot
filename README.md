@@ -25,11 +25,16 @@ This will dynamically load the script into the current webpage.
 
 ## Usage
 
+PLM Bot automatically activates itself on load but can be triggered manually
+
+```javascript
+const plmBot = new PLM_Bot();
+```
+
 ### Single Run
 You can run PLM-Bot for a single set of values:
 
 ```javascript
-const plmBot = new PLM_Bot();
 plmBot.set(['Activity Name', 'Request Owner', 'Activity Type', 'Responsible Department', 'Constraint Type', '2024-12-18', '5', 'kisi']).run();
 ```
 
@@ -37,7 +42,6 @@ plmBot.set(['Activity Name', 'Request Owner', 'Activity Type', 'Responsible Depa
 Load multiple sets of values and run them sequentially:
 
 ```javascript
-const plmBot = new PLM_Bot();
 plmBot.load(['Test1', 'Department1', 'Type1', 'DepartmentA', 'ConstraintA', '2024-12-18', '5', 'kisi']);
 plmBot.load(['Test2', 'Department2', 'Type2', 'DepartmentB', 'ConstraintB', '2024-12-19', '3', 'kisi']);
 plmBot.runLoaded();
